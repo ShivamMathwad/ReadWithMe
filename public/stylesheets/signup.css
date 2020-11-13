@@ -1,0 +1,49 @@
+body,html {
+    height: 100%;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 5%;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.signup-form {
+    padding: 25px;
+    margin-left: 32%;
+    margin-right: 32%;
+    border-radius: 10px;   
+}
+
+.form-control {
+    width: 325px;
+    border: 1px solid red;
+    border-radius: 19px;
+    padding-left: 20px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 19px 0 rgba(0, 0, 0, 0.19);
+}
+.form-control::placeholder { 
+  color: darkred;
+}
+
+.btn {
+    width: 325px;
+    background-color: #FF4500;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid red;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 19px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn:hover {
+    background-color: white;
+    color: red;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+}
