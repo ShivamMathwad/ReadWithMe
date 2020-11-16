@@ -1,4 +1,7 @@
-<?php include("./templates/header.php"); ?>
+<?php 
+    session_start();
+    include("./templates/header.php"); 
+?>
 
 <style>
     <?php include("./stylesheets/signup.css"); ?>
@@ -19,6 +22,10 @@
 
         if (email.length < 10 || !email.includes("@") || !email.includes(".")) {
             err_msg = "Invalid Email!";
+            valid = false;
+        }
+        if (email == "admin@readwithme.com") {
+            err_msg = "Cannot signup using Admin credentials!";
             valid = false;
         }
         if (first_name.length < 2 || last_name.length < 2) {
@@ -52,7 +59,7 @@
     <div class="signup-form">
         <form action="./Handlers/SignupHandler.php" method="post" onsubmit="return validate();">
             <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email">
+                <input type="text" name="email" class="form-control" placeholder="Email">
             </div>
             <div class="form-group">
                 <input type="text" name="first_name" class="form-control" placeholder="First Name">
@@ -75,6 +82,12 @@
             <button class="btn mt-4">Submit</button>
         </form><br />
         <p id="err_msg"></p>
+        <p>
+            <?php
+                (array_key_exists('error', $_SESSION) && !empty($_SESSION['error'])) ? print($_SESSION['error']) : print("");
+                unset($_SESSION['error']);
+            ?>
+        </p>
     </div>
 </div>
 

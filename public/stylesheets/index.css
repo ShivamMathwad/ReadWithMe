@@ -1,5 +1,8 @@
-body {
-    background-color: #f39c12;
+body,html {
+    /*background-color: #f39c12;*/
+    height: 100%;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    overflow: hidden;
 }
 
 img {
@@ -37,4 +40,14 @@ button {
 
 a {
     color: #ff4d00;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#err_msg {
+    margin-top: 20px;
 }
