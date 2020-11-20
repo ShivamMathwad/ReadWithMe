@@ -1,0 +1,90 @@
+body,html {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
+.navbar {
+    padding: 2px;
+}
+
+#img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    height: 160px;
+    width: 160px;
+}
+
+#email {
+    color: white;
+    margin-top: 2px;
+    text-align: center;
+}
+
+#acc_details {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 65px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#heading {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 16px;
+    margin-left: 3px;
+}
+
+.label {
+    color: white;
+    margin-left: 55px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.details {
+    display: inline;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 7px;
+    margin-top: 2px;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#update_personal {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 90px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: white;
+}
+
+input {
+    width: 340px;
+    border-radius: 10px;
+    margin-left: 9px;
+    margin-top: 15px;
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+#update_password {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: white;
+}
+
+.below_heading {
+    margin-left: 7px;
+    margin-top: 3px;
+}
