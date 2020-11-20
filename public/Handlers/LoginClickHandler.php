@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     //Connect to database
     $conn = mysqli_connect('localhost', 'root', '', 'readwithme');
 
@@ -8,9 +10,6 @@
 
     $email = $_POST['email'];
     $password = $_POST['password'];
-
-    session_start();
-    $_SESSION['user_email'] = $email;
 
     $sql = "SELECT * FROM Account WHERE Email='$email' AND Password='$password' ";
     $result = mysqli_query($conn, $sql);
@@ -23,6 +22,7 @@
         header("Location: ../admin_login.php");
         exit();
     } else {
+        $_SESSION['user_email'] = $email;
         header("Location: ../main_page.php");
         exit();
     }

@@ -29,10 +29,10 @@
                     <a class="nav-link" href="./account.php">Account</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+                    <a class="nav-link" href="./cart.php"><i class="fas fa-shopping-cart"></i> Cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Orders</a>
+                    <a class="nav-link" href="./orders.php">Orders</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php">Logout</a>

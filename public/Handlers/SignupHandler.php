@@ -1,4 +1,7 @@
 <?php
+    session_start();
+    include("../email.php"); 
+
     //Connect to database
     $conn = mysqli_connect('localhost', 'root', '', 'readwithme');
 
@@ -22,9 +25,13 @@
         if (!mysqli_query($conn, $sql)) {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
-        echo 'Success !!';
+
+        signup_mail($email, $first_name);  //Send sign-up mail to user
+
+        $_SESSION['user_email'] = $email;
+        header("Location: ../main_page.php");
+        exit();
     } else {
-        session_start();
         $_SESSION['error'] = "User email already exists!";
         header("Location: ../signup.php");
         exit();
