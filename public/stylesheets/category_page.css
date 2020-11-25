@@ -11,4 +11,54 @@ body,html {
     color: white;
     text-shadow: 2px 2px 4px #000000;
     margin-top: 90px;
+    margin-left: 160px;
+}
+
+#book_list {
+    display: flex;
+    flex-wrap: wrap; 
+    margin-left: 130px; 
+    margin-right: 130px; 
+    padding-bottom: 70px;
+}
+
+#title {
+    margin-top:0; 
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+#author {
+    margin-top:0; 
+    margin-bottom: 0; 
+    font-size: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+#price {
+    font-size: 15px;
+    margin-top: 4px; 
+    margin-bottom: 0;
+}
+
+#button {
+    border: 1px solid gray; 
+    margin-top:7px;
+}
+#button:hover {
+    cursor: pointer;
+}
+
+.col-3 {
+    margin-top:40px;
+}
+
+.card {
+    height: 160px
 }

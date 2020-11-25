@@ -6,9 +6,55 @@ body,html {
     padding: 2px;
 }
 
+.card {
+    background-color: orange;
+    border: none;
+}
+
 #img {
     margin-top: 130px;
     margin-left: 25px;
     height: 450px;
     width: 340px;
+}
+
+#heading {
+    margin-top: 120px;
+    margin-bottom: 0;
+    font-size: 31px;
+    font-weight: bold;
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+#author {
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+#price {
+    font-weight: bold;
+    font-size: large;
+}
+
+#description {
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+}
+
+#qty {
+    margin-left: 100px;
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
 }

@@ -26,13 +26,13 @@
         <textarea rows="3" name="description" placeholder="Enter Book description" required></textarea>
         <label><strong>Genre</strong></label>
         <select name="genre">
-            <option value="classic" selected>Classic</option>
-            <option value="mystery">Mystery</option>
-            <option value="fantasy">Fantasy</option>
-            <option value="poetry">Poetry</option>
-            <option value="biography">Biography</option>
-            <option value="mythology">Mythology</option>
-            <option value="romance">Romance</option>
+            <option value="Classic" selected>Classic</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Poetry">Poetry</option>
+            <option value="Biography">Biography</option>
+            <option value="Mythology">Mythology</option>
+            <option value="Romance">Romance</option>
         </select><br />
         <label><b>Upload Book Image</b></label>
         <input type="file" name="image" required /><br />
