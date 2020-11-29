@@ -4,9 +4,10 @@
 
     $email = $_SESSION['user_email'];
     $total_price = $_POST['total_price'];
+    $date = date("d-m-Y");
     $books_bought = $_POST['books_bought'];
 
-    $books_bought_arr = explode (";", $string); //Convert comma separated string to array
+    $books_bought_arr = explode (";", $books_bought); //Convert comma separated string to array
 
     //Connect to database 
     $conn = mysqli_connect('localhost', 'root', '', 'readwithme');
@@ -25,7 +26,7 @@
         echo "Error deleting record: " . mysqli_error($conn);
     }
 
-    //order_mail($email, $first_name);  //Send order mail to user
+    order_mail($email, $books_bought_arr, $total_price, $date);  //Send order mail to user
 
     header("Location: ../order_success.php");
     exit();

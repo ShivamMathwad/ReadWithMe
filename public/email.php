@@ -39,5 +39,33 @@
         }
     }
 
-    //signup_mail("shivammathwad2017.it@mmcoe.edu.in", "Shivam");
+    function order_mail($to, $books_bought, $total_price, $date) {
+        $mail = init();
+
+        $mail->AddAddress($to);
+        $mail->Subject = "Order Invoice";
+
+        $books_html = "";
+
+        foreach($books_bought as $value) {
+            $books_html .= "<li>" . $value . "</li>";
+        }
+
+        $message = "Hi,<br/>Thank you for your order. Your package will be delivered by our ReadWithMe 
+        Delivery Agent within 2-3 business days.<br/>
+        Books ordered are:
+        <ul style='margin-top:3px;margin-bottom:3px;'>
+        <b>$books_html</b>
+        </ul>
+        The total price of your order is: &#x20B9;$total_price.00, ordered on $date.<br/><br/>
+        Regards,<br/>ReadWithMe support team";
+
+        $mail->MsgHTML($message);
+
+        if (!$mail->Send()) {
+            echo "<script>console.log('Error while sending Email !');</script>";
+        } else {
+            echo "<script>console.log('Email sent successfully !');</script>";
+        }
+    }
 ?>

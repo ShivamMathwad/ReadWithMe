@@ -1,4 +1,7 @@
-<?php include("./templates/header.php"); ?>
+<?php 
+    session_start();
+    include("./templates/header.php"); 
+?>
 
 <style>
     <?php include("./stylesheets/cart.css"); ?>
@@ -7,9 +10,6 @@
 <?php include("./templates/nav.php"); ?>
 
 <?php
-    $option1 = $option2 = $option3 = $option4 = $option5 = $option6 = $option7 = "";
-    $option8 = $option9 = $option10 = $option11 = $option12 = $option13 = "";
-    
     $email = $_SESSION['user_email'];
     $total_price = 0;
     $books_bought = array();
@@ -45,6 +45,9 @@
                 $author = $new_row['Author'];
                 $price = $new_row['Price'];
                 $img_src = 'data:image;base64,' . $new_row['Image'];
+
+                $option1 = $option2 = $option3 = $option4 = $option5 = $option6 = $option7 = "";
+                $option8 = $option9 = $option10 = $option11 = $option12 = $option13 = "";
 
                 switch ($qty) {
                     case "1": $option1 = 'selected'; break;
@@ -103,10 +106,6 @@
                         </div>
                     </div>
                 HTML;
-
-                //Reset all options to null
-                $option1 = $option2 = $option3 = $option4 = $option5 = $option6 = $option7 = "";
-                $option8 = $option9 = $option10 = $option11 = $option12 = $option13 = "";
             }
         ?>
         

@@ -1,3 +1,53 @@
+body {
+    background-color: darkorange;
+}
+
 .navbar {
     padding: 2px;
+}
+
+.order {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 35px;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 25px;
+}
+
+#order_id {
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+#date {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#books {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#list {
+    margin-left: 60px;
+    margin-bottom: 3px;
+}
+
+li {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+#price {
+    text-align: right;
+    margin-right: 30px;
+    margin-bottom: 3px;
 }
