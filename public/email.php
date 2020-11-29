@@ -4,9 +4,12 @@
     require '../../PHPMailer-master/src/Exception.php';
     require '../../PHPMailer-master/src/PHPMailer.php';
     require '../../PHPMailer-master/src/SMTP.php';
+    include("../../abc.php");
 
-
+    
     function init() {
+        global $EMAIL, $PASSWORD;
+
         $mail = new PHPMailer();
         $mail->IsSMTP();
         $mail->Mailer = "smtp";
@@ -15,13 +18,14 @@
         $mail->SMTPSecure = "tls";
         $mail->Port       = 587;
         $mail->Host       = "smtp.gmail.com";
-        $mail->Username   = "readwithme.bookstore@gmail.com";
-        $mail->Password   = "readwithmeadmin";
-        $mail->SetFrom("readwithme.bookstore@gmail.com", "ReadWithMe");
+        $mail->Username   = $EMAIL;
+        $mail->Password   = $PASSWORD;
+        $mail->SetFrom($EMAIL, "ReadWithMe");
         $mail->IsHTML(true);
 
         return $mail;
     }
+
 
     function signup_mail($to, $username) {
         $mail = init();
@@ -38,6 +42,7 @@
             echo "<script>console.log('Email sent successfully !');</script>";
         }
     }
+
 
     function order_mail($to, $books_bought, $total_price, $date) {
         $mail = init();
@@ -57,7 +62,7 @@
         <ul style='margin-top:3px;margin-bottom:3px;'>
         <b>$books_html</b>
         </ul>
-        The total price of your order is: &#x20B9;$total_price.00, ordered on $date.<br/><br/>
+        The total price of your order is: <b>&#x20B9;$total_price.00</b>, ordered on $date.<br/><br/>
         Regards,<br/>ReadWithMe support team";
 
         $mail->MsgHTML($message);

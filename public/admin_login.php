@@ -71,27 +71,5 @@
     ?>
     <p style="color: white;" id="validation_msg"><b><?php echo $validation_msg; ?></b></p>
 </div>
-<!--
-<div class="bottom-box">
-    <div class="container">
-        <h2><i>Recently Added</i></h2>
-        <div class="card" style="max-width: 520px; max-height: 205px">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="./27.jpg" height="205px" class="card-img" alt="Image">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <p style="margin-bottom: 0;"><b>A Wizard of Earthsea</b></p>
-                        <p style="margin-bottom: 0;">-by Ursula K. Le Guin</p>
-                        <p style="margin-top: 9px; margin-bottom: 0;">$25.00</p>
-                        <p style="margin-top: 10px;">Genre: Fantasy</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bottom-box2"></div>
--->
+
 <?php include("./templates/footer.php"); ?>

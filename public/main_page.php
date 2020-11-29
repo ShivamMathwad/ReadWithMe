@@ -7,7 +7,7 @@
 <?php include("./templates/nav.php"); ?>
 
 <?php
-    $sql = "SELECT * FROM Book_Data LIMIT 16";
+    $sql = "SELECT * FROM Book_Data LIMIT 8";
     $result = mysqli_query($conn, $sql);
 ?>
 
