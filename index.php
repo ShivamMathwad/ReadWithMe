@@ -1,4 +1,7 @@
-<?php include("./public/templates/header.php"); ?>
+<?php 
+    session_start();
+    include("./public/templates/header.php"); 
+?>
 
 <style>
     <?php include("./public/stylesheets/index.css"); ?>
@@ -49,7 +52,6 @@
 <p id="err_msg"></p>
 <p> 
     <?php 
-        session_start();
         (array_key_exists('err_msg',$_SESSION) && !empty($_SESSION['err_msg'])) ? print($_SESSION['err_msg']) : print(""); 
         unset($_SESSION['err_msg']);
     ?> 

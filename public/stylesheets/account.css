@@ -88,3 +88,8 @@ input {
     margin-left: 7px;
     margin-top: 3px;
 }
+
+#err_msg {
+    color: #ff4d00; 
+    margin-bottom: 0;
+}

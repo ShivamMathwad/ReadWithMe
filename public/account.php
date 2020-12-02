@@ -75,7 +75,7 @@
                 <input type="password" style="width:290px;" name="cpassword" placeholder="Confirm password" required/><br/>
                 <button class="btn btn-success mt-4">Update info</button><br/>
             </form>
-            <p style="color: #ff4d00; margin-bottom: 0;" id="err_msg"></p>
+            <p id="err_msg"></p>
         </div>
     </div>
 </div>

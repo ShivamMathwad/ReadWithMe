@@ -12,7 +12,6 @@
     // Use parse_str() function to parse the string passed via URL 
     parse_str($url_components['query'], $params); 
     $genre = $params['genre'];
-    //$genre = "Mystery";
 
     $sql = "SELECT * FROM Book_Data WHERE Genre='$genre' ";
     $result = mysqli_query($conn, $sql);
